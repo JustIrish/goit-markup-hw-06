@@ -589,11 +589,12 @@ body {
   color: var(--accent-color);
 }
 
-.soc-icon-footer {
+.soc-icon-footer,
+.newsletter {
   margin-left: 70px;
 }
 
-.title-footer {
+.actions-footer {
   margin-bottom: 20px;
   color: var(--second-text-color);
 
