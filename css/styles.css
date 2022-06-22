@@ -211,7 +211,7 @@ body {
   line-height: 1.88;
   letter-spacing: 0.06em;
   border-radius: 4px;
-  padding: 10px 0;
+  padding: 9px 0;
   min-width: 200px;
   border: 1px solid transparent;
 
@@ -630,6 +630,16 @@ body {
   letter-spacing: 0.03em;
 }
 
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+}
+
+.icon-send {
+  margin-left: 10px;
+}
 /* --------------МОДАЛЬНОЕ ОКНО------------- */
 
 .backdrop {
