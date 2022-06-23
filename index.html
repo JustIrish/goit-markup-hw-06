@@ -419,6 +419,7 @@
               name="user-email"
               class="mail-input"
               placeholder="E-mail"
+              required
             />
             <button type="submit" class="hero-btn btn">
               Подписаться
@@ -437,6 +438,49 @@
             <use href="./img/icons.svg#icon-close"></use>
           </svg>
         </button>
+        <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+        <form class="modal-form">
+          <div class="modal-field">
+            <label for="user-name" class="modal-label">Имя</label>
+            <input
+              type="text"
+              name="user-name"
+              class="modal-input"
+              id="user-name"
+              required
+            />
+          </div>
+          <div class="modal-field">
+            <label for="user-tel" class="modal-label">Телефон</label>
+            <input
+              type="tel"
+              name="user-tel"
+              class="modal-input"
+              id="user-tel"
+              required
+            />
+          </div>
+          <div class="modal-field">
+            <label for="user-mail" class="modal-label">Почта</label>
+            <input
+              type="email"
+              name="user-mail"
+              class="modal-input"
+              id="user-mail"
+              required
+            />
+          </div>
+          <div class="modal-field">
+            <label for="modal-text" class="modal-label">Комментарий</label>
+            <textarea
+              name="modal-text"
+              class="modal-text"
+              id="modal-text"
+              placeholder="Введите текст"
+            ></textarea>
+          </div>
+          <button type="submit" class="hero-btn button">Отправить</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
