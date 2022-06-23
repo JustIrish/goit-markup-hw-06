@@ -697,8 +697,8 @@ body {
   margin-bottom: 12px;
 }
 
-.modal-field:not(:last-child) {
-  margin-bottom: 10px;
+.modal-field + .modal-field {
+  margin-top: 10px;
 }
 
 .modal-label {
@@ -731,6 +731,17 @@ body {
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+}
+
+.label-check {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.agreement-link {
+  color: var(--accent-color);
 }
 
 .button {
