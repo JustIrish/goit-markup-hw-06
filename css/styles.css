@@ -756,35 +756,40 @@ body {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.label-check {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.modal-check {
   margin-top: 20px;
   margin-bottom: 30px;
-
-  line-height: 1.17;
 }
 
 .icon-wrap {
   width: 16px;
   height: 15px;
   border: 2px solid var(--title-text-color);
+  border-radius: 2px;
+  margin-right: 7px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.label-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  line-height: 1.17;
 }
 
 .icon-check {
   fill: transparent;
 }
 
-.input-check:checked + .icon-wrap {
+.input-check:checked + .label-check .icon-wrap {
   background-color: var(--accent-color);
   border: none;
 }
 
-.input-check:checked + .icon-check {
+.input-check:checked + .label-check .icon-check {
   fill: var(--second-text-color);
 }
 
