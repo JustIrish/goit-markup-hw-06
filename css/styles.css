@@ -666,6 +666,16 @@ body {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
 .modal-close-btn {
   position: absolute;
   top: 8px;
@@ -736,14 +746,11 @@ body {
 }
 
 .modal-input:focus,
-.modal-input:hover,
-.modal-text:focus,
-.modal-text:hover {
+.modal-text:focus {
   border-color: var(--accent-color);
 }
 
-.modal-input:focus + .input-icon,
-.modal-input:hover + .input-icon {
+.modal-input:focus + .input-icon {
   fill: var(--accent-color);
 }
 
@@ -751,6 +758,7 @@ body {
   width: 100%;
   height: 120px;
   padding: 12px 16px;
+  background-color: transparent;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
@@ -768,19 +776,8 @@ body {
 .modal-check {
   margin-top: 20px;
   margin-bottom: 30px;
-}
-
-.icon-wrap {
-  width: 16px;
-  height: 15px;
-  border: 2px solid var(--title-text-color);
-  border-radius: 2px;
-  margin-right: 7px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .label-check {
@@ -791,18 +788,24 @@ body {
   line-height: 1.17;
 }
 
-.icon-check {
-  fill: transparent;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.icon-wrap {
+  display: block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
 }
 
-.input-check:checked + .label-check .icon-wrap {
-  background-color: var(--accent-color);
-  border: none;
+.input-check:not(:checked) + .label-check .icon-fill-check {
+  display: none;
 }
 
-.input-check:checked + .label-check .icon-check {
-  fill: var(--second-text-color);
+.input-check:checked + .label-check .icon-checkbox {
+  display: none;
+}
+
+.input-check:focus + .label-check .icon-checkbox {
+  fill: #188ce8;
+  outline: 1px solid #000000;
 }
 
 .agreement-link {
@@ -812,14 +815,4 @@ body {
 .button {
   display: block;
   margin: 0 auto;
-}
-
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.no-scroll {
-  overflow: hidden;
 }
